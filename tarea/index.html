@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarea: Registro de Notas de Estudiantes</title>
+  <link rel="icon" href="data:,">
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 640px; margin: 30px auto; padding: 0 10px; }
+    section { border: 1px solid #ccc; padding: 16px; border-radius: 8px; margin-bottom: 20px; }
+    .error { color: #c0392b; font-weight: bold; margin-top: 8px; }
+    ul { list-style: none; padding: 0; }
+    li { display: flex; justify-content: space-between; align-items: center; padding: 8px; border-bottom: 1px solid #eee; }
+    .btn-borrar { background: #e74c3c; color: white; border: none; padding: 4px 8px; cursor: pointer; border-radius: 4px; }
+    .aprobado { color: #27ae60; font-weight: bold; }
+    .desaprobado { color: #c0392b; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Registro de Notas de Estudiantes</h1>
+
+  <section>
+    <h2>Registrar Estudiante</h2>
+    <form id="formEstudiante">
+      <input id="nombreEstudiante" type="text" placeholder="Nombre del estudiante">
+      <input id="nota1" type="number" step="0.1" min="0" max="20" placeholder="Nota 1 (0-20)">
+      <input id="nota2" type="number" step="0.1" min="0" max="20" placeholder="Nota 2 (0-20)">
+      <button type="submit">Agregar</button>
+    </form>
+    <p id="mensajeError" class="error"></p>
+  </section>
+
+  <section>
+    <h2>Lista de Estudiantes</h2>
+    <input id="filtroEstudiante" type="text" placeholder="Buscar por nombre...">
+    <ul id="listaEstudiantes"></ul>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
